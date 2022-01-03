@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OSK_Mobile.Pages.Employee.EmployeeDataPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Dane instruktora" FontSize="20" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <StackLayout>
+        <Label Text="Dane osobowe" FontSize="20" Margin="5, 0, 0, 0" />
+        <Grid Margin="5, 5, 5, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- 0 0 -->
+            <BoxView />
+            <Label Text="Imię" FontSize="15" 
+                   VerticalOptions="Center"/>
+
+            <!-- 0 1 -->
+            <BoxView Grid.Column="1" />
+            <Label Grid.Column="1" Text="NIC" FontSize="15" x:Name="namesTxt"
+                   VerticalOptions="Center"/>
+
+            <!-- 1 0 -->
+            <BoxView Grid.Row="1"/>
+            <Label Grid.Row="1" Text="Nazwisko" FontSize="15" 
+                   VerticalOptions="Center"/>
+
+            <!-- 1 1 -->
+            <BoxView Grid.Row="1" Grid.Column="1" />
+            <Label Grid.Row="1" Grid.Column="1" Text="NIC" FontSize="15" x:Name="surnameTxt"
+                   VerticalOptions="Center"/>
+
+            <!-- 2 0 -->
+            <BoxView Grid.Row="2" />
+            <Label Grid.Row="2" Text="PESEL" FontSize="15" 
+                   VerticalOptions="Center"/>
+
+            <!-- 2 1 -->
+            <BoxView Grid.Row="2" Grid.Column="1" />
+            <Label Grid.Row="2" Grid.Column="1" Text="NIC" FontSize="15" x:Name="peselTxt" 
+                   VerticalOptions="Center"/>
+
+            <!-- 3 0 -->
+            <BoxView Grid.Row="3" />
+            <Label Grid.Row="3" Text="Nazwa użytkownika" FontSize="15" 
+                   VerticalOptions="Center"/>
+
+            <!-- 3 1 -->
+            <BoxView Grid.Row="3" Grid.Column="1" />
+            <Label Grid.Row="3" Grid.Column="1" Text="NIC" FontSize="15" x:Name="userNameTxt" 
+                   VerticalOptions="Center"/>
+
+        </Grid>
+
+        <Label Text="Dane adresowe" FontSize="20" Margin="5, 0, 0, 0" />
+        <Grid Margin="5, 5, 5, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- 0 0 -->
+            <BoxView  />
+            <Label Text="Miejscowość" FontSize="15"
+                   VerticalOptions="Center"/>
+
+            <!-- 0 1 -->
+            <BoxView Grid.Column="1" />
+            <Label Grid.Column="1" Text="NIC" FontSize="15" x:Name="townTxt"
+                   VerticalOptions="Center"/>
+
+            <!-- 1 0 -->
+            <BoxView Grid.Row="1"/>
+            <Label Grid.Row="1" Text="Ulica" FontSize="15"
+                   VerticalOptions="Center"/>
+
+            <!-- 1 1 -->
+            <BoxView Grid.Row="1" Grid.Column="1" />
+            <Label Grid.Row="1" Grid.Column="1" Text="NIC" FontSize="15" x:Name="streetTxt"
+                   
+                   VerticalOptions="Center"/>
+
+            <!-- 2 0 -->
+            <BoxView Grid.Row="2" />
+            <Label Grid.Row="2" Text="Numer domu/mieszkania" FontSize="15"
+                   VerticalOptions="Center"/>
+
+            <!-- 2 1 -->
+            <BoxView Grid.Row="2" Grid.Column="1" />
+            <Label Grid.Row="2" Grid.Column="1" Text="NIC" FontSize="15" x:Name="nrHomeTxt"
+                   
+                   VerticalOptions="Center"/>
+
+            <!-- 3 0 -->
+            <BoxView Grid.Row="3" />
+            <Label Grid.Row="3" Text="Kod pocztowy" FontSize="15"
+                   VerticalOptions="Center"/>
+
+            <!-- 3 1 -->
+            <BoxView Grid.Row="3" Grid.Column="1" />
+            <Label Grid.Row="3" Grid.Column="1" Text="NIC" FontSize="15" x:Name="postCodeTxt"
+                   
+                   VerticalOptions="Center"/>
+
+            <!-- 4 0 -->
+            <BoxView Grid.Row="4" />
+            <Label Grid.Row="4" Text="Poczta" FontSize="15"
+                   VerticalOptions="Center"/>
+
+            <!-- 4 1 -->
+            <BoxView Grid.Row="4" Grid.Column="1" />
+            <Label Grid.Row="4" Grid.Column="1" Text="NIC" FontSize="15" x:Name="postTxt"
+                   
+                   VerticalOptions="Center"/>
+
+            <!-- 5 0 -->
+            <BoxView Grid.Row="5" />
+            <Label Grid.Row="5" Text="Numer telefonu" FontSize="15"
+                   VerticalOptions="Center"/>
+
+            <!-- 5 1 -->
+            <BoxView Grid.Row="5" Grid.Column="1" />
+            <Label Grid.Row="5" Grid.Column="1" Text="NIC" FontSize="15" x:Name="phoneTxt"
+                   
+                   VerticalOptions="Center"/>
+
+            <!-- 6 0 -->
+            <BoxView Grid.Row="6"  />
+            <Label Grid.Row="6" Text="E-mail" FontSize="15"
+                   VerticalOptions="Center"/>
+
+            <!-- 6 1 -->
+            <BoxView Grid.Row="6" Grid.Column="1" />
+            <Label Grid.Row="6" Grid.Column="1" Text="NIC" FontSize="15" x:Name="emailTxt"
+                   VerticalOptions="Center"/>
+
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

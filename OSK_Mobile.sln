@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSK_Mobile.Android", "OSK_Mobile\OSK_Mobile.Android\OSK_Mobile.Android.csproj", "{4A92A204-0D84-4932-8015-DC4AC0E29D74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSK_Mobile", "OSK_Mobile\OSK_Mobile\OSK_Mobile.csproj", "{D36EE6C3-9624-4F15-AE75-1888DB7C1DBA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A92A204-0D84-4932-8015-DC4AC0E29D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A92A204-0D84-4932-8015-DC4AC0E29D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A92A204-0D84-4932-8015-DC4AC0E29D74}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4A92A204-0D84-4932-8015-DC4AC0E29D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A92A204-0D84-4932-8015-DC4AC0E29D74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A92A204-0D84-4932-8015-DC4AC0E29D74}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D36EE6C3-9624-4F15-AE75-1888DB7C1DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D36EE6C3-9624-4F15-AE75-1888DB7C1DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D36EE6C3-9624-4F15-AE75-1888DB7C1DBA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D36EE6C3-9624-4F15-AE75-1888DB7C1DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D36EE6C3-9624-4F15-AE75-1888DB7C1DBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D36EE6C3-9624-4F15-AE75-1888DB7C1DBA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19B26B62-9D3A-4CFA-A687-946925537900}
+	EndGlobalSection
+EndGlobal

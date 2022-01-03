@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OSK_Mobile.Pages.Employee.DriveActivitesPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Jazdy" FontSize="20" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <StackLayout>
+        <Grid Margin="5, 5, 5, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <BoxView />
+            <DatePicker
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Format="dd-MM-yyyy"
+                x:Name="dateSelect"/>
+            <Button HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Column="1" Text="Moje jazdy" 
+                TextColor="White" FontAttributes="Bold" BackgroundColor="#088da5" Clicked="GetDrivesActivitesForEmployee" />
+            <Button HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Column="2" Text="Wszystkie jazdy dnia" 
+                TextColor="White" FontAttributes="Bold" BackgroundColor="#088da5" Clicked="GetDrivesActivitesForAllEmployees" />
+
+        </Grid>
+
+        <ListView x:Name="listOfDrivesActivities" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid Margin="5, 0, 5, 0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="4*" />
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="4*" />
+                                </Grid.ColumnDefinitions>
+                                <BoxView />
+                                <Label Text="{Binding Data}" VerticalOptions="Center" />
+                                <Label Grid.Column="1" Text="{Binding StartTime}" VerticalOptions="Center" />
+                                <Label Grid.Column="2" Text="{Binding Student}" VerticalOptions="Center" />
+                                <Label Grid.Column="3" Text="{Binding Category}" VerticalOptions="Center" />
+                                <Label Grid.Column="4" Text="{Binding Status}" VerticalOptions="Center" />
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OSK_Mobile.Pages.Student.StudentCourseDetailPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label x:Name="courseName" Text="" FontSize="20" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <StackLayout>
+        <Grid x:Name="drivaPracticalDetail" Margin="5, 5, 5, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <BoxView />
+            <Label VerticalOptions="Center" Text="Nazwa kursu" />
+
+            <BoxView Grid.Column="1" />
+            <Label VerticalOptions="Center" x:Name="courseNameTxt" Grid.Column="1" Text="" />
+
+            <BoxView Grid.Row="1" />
+            <Label VerticalOptions="Center" Grid.Row="1" Text="Kategoria" />
+
+            <BoxView Grid.Row="1" Grid.Column="1" />
+            <Label VerticalOptions="Center" x:Name="category" Grid.Row="1" Grid.Column="1" Text="" />
+            
+            <BoxView Grid.Row="2" />
+            <Label VerticalOptions="Center" Grid.Row="2" Text="Data rozpoczęcia" />
+
+            <BoxView Grid.Row="2" Grid.Column="1" />
+            <Label VerticalOptions="Center" x:Name="startCourseDate" Grid.Row="2" Grid.Column="1" Text="" />
+
+            <BoxView Grid.Row="3" />
+            <Label VerticalOptions="Center" Grid.Row="3" Text="Data zakończenia" />
+
+            <BoxView Grid.Row="3" Grid.Column="1" />
+            <Label VerticalOptions="Center" x:Name="endCourseDate" Grid.Row="3" Grid.Column="1" Text="" />
+
+            <BoxView Grid.Row="4" />
+            <Label VerticalOptions="Center" Grid.Row="4" Text="Dodatkowe godziny" />
+
+            <BoxView Grid.Row="4" Grid.Column="1" />
+            <Label VerticalOptions="Center" x:Name="extraHours" Grid.Row="4" Grid.Column="1" Text="" />
+
+            <BoxView Grid.Row="5" />
+            <Label VerticalOptions="Center" Grid.Row="5" Text="Suma wpłat" />
+
+            <BoxView Grid.Row="5" Grid.Column="1" />
+            <Label VerticalOptions="Center" x:Name="sumOfPayments" Grid.Row="5" Grid.Column="1" Text="" />
+
+            <BoxView Grid.Row="6" />
+            <Label VerticalOptions="Center" Grid.Row="6" Text="Status uczestnika" />
+
+            <BoxView Grid.Row="6" Grid.Column="1" />
+            <Label VerticalOptions="Center" x:Name="studentCourseStatus" Grid.Row="6" Grid.Column="1" Text="" />
+
+            
+
+        </Grid>
+
+    </StackLayout>
+    
+</ContentPage>
