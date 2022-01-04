@@ -22,6 +22,7 @@ namespace OSK_Mobile
         
         public MainPage() {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
          
         private async void LoginToAccount(object sender, EventArgs e) {

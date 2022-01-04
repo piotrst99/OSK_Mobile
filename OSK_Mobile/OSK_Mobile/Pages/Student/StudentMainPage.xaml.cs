@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -83,6 +84,10 @@ namespace OSK_Mobile.Pages.Student
             await Navigation.PushAsync(new DriveActivitiesPage(_userID), true);
         }
 
+        private async void ShowPayments(object sender, EventArgs e) {
+            await Navigation.PushAsync(new PaymentsPage(_userID), true);
+        }
+
         private void ShowSettings(object sender, EventArgs e) {
             Toast.MakeText(Android.App.Application.Context, "Ustawienia", ToastLength.Short).Show();
         }
@@ -93,8 +98,10 @@ namespace OSK_Mobile.Pages.Student
             bool result = await DisplayAlert("WYLOGOWANIE", "Czy wylogować się z konta?", "TAK", "NIE");
             if (result) {
                 try {
-                    Application.Current.MainPage = new MainPage();
-                    await Navigation.PushAsync(new MainPage(), true);
+                    //Application.Current.MainPage = new MainPage();
+                    //App.Current.MainPage = new MainPage();
+                    await Navigation.PushAsync(new MainPage());
+                    this.Navigation.RemovePage(this.Navigation.NavigationStack[this.Navigation.NavigationStack.Count - 2]);
                 }
                 catch (Exception) {
 
@@ -102,6 +109,21 @@ namespace OSK_Mobile.Pages.Student
                  
             }
         }
+        
+        
+
+        /*protected override bool OnBackButtonPressed() {
+            //return base.OnBackButtonPressed();
+            Device.BeginInvokeOnMainThread(async () => {
+                //if (await DisplayAlert("", "Are you sure you want to exit from this page?", "Yes", "No")){
+                if (base.OnBackButtonPressed()){
+                    
+                    //Thread.CurrentThread.Abort();
+                    await Navigation.PopAsync();
+                }
+            });
+            return true;
+        }*/
 
 
 

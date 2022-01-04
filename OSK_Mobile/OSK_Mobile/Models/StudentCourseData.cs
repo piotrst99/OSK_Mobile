@@ -14,5 +14,7 @@ namespace OSK_API.Models
         public int SumOfPayments { get; set; }
         public string StudentCourseStatus { get; set; }
         public string Category { get; set; }
+        public int CountOfPractical { get; set; }
+        public int CountOfCompletedPractical { get; set; }
     }
 }

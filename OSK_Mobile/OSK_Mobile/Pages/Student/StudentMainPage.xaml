@@ -79,13 +79,12 @@
                    HorizontalOptions="Center"
                    VerticalOptions="Center"  />-->
             
-            <BoxView Grid.Row="2" Grid.Column="1" 
-                     BackgroundColor="#BF043055" />
-            <Label Grid.Row="2" Grid.Column="1" Text="NIC" 
-                   TextColor="White" FontAttributes="Bold"
-                   x:Name="Btn"
-                   HorizontalOptions="Center" 
-                   VerticalOptions="Center"   />
+            <BoxView Grid.Row="2" Grid.Column="1"/>
+            <ImageButton Grid.Row="2" Grid.Column="1"
+                BackgroundColor="#BF043055"
+                x:Name="paymentsBtn"
+                Source="PaymentIcon.png"
+                Clicked="ShowPayments"/>
 
             <BoxView Grid.Row="3"  />
             <Label Grid.Row="3" Text="Jazdy" FontSize="18"
@@ -93,7 +92,7 @@
                    VerticalOptions="Center"/>
 
             <BoxView Grid.Row="3" Grid.Column="1" />
-            <Label Grid.Row="3" Grid.Column="1" Text="" FontSize="18"
+            <Label Grid.Row="3" Grid.Column="1" Text="Wpłaty" FontSize="18"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
             

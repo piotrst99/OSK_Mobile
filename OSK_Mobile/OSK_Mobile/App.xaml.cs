@@ -16,10 +16,11 @@ namespace OSK_Mobile
             Startup.ConfigureServices();
 
             if (!isLogin) {
-                var mPage = new MainPage();
+                MainPage = new NavigationPage(new MainPage());
+                /*var mPage = new MainPage();
                 NavigationPage.SetHasNavigationBar(mPage, false);
                 NavigationPage mypage = new NavigationPage(mPage);
-                MainPage = mypage;
+                MainPage = mypage;*/
             }
             else {
                 //

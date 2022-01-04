@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OSK_Mobile.Pages.Student.PaymentsPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Wpłaty" FontSize="20" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <StackLayout>
+
+        <Grid Margin="5, 0, 5, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+            <BoxView />
+            <Label Text="Data" VerticalOptions="Center" />
+            <Label Grid.Column="1" Text="Godzina" VerticalOptions="Center" />
+            <Label Grid.Column="2" Text="Koszt" VerticalOptions="Center" />
+            <Label Grid.Column="3" Text="Typ wpłaty" VerticalOptions="Center" />
+        </Grid>
+
+        <ListView x:Name="listOfPayments" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid Margin="5, 0, 5, 0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="4*" />
+                                </Grid.ColumnDefinitions>
+                                <BoxView />
+                                <Label Text="{Binding PaymentDate}" VerticalOptions="Center" />
+                                <Label Grid.Column="1" Text="{Binding PaymentTime}" VerticalOptions="Center" />
+                                <Label Grid.Column="2" Text="{Binding Cost}" VerticalOptions="Center" />
+                                <Label Grid.Column="3" Text="{Binding TypePayment}" VerticalOptions="Center" />
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

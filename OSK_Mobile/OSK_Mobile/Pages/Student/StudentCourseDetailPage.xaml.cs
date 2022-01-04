@@ -30,6 +30,7 @@ namespace OSK_Mobile.Pages.Student
             extraHours.Text = studentCourseData.ExtraHours.ToString();
             sumOfPayments.Text = studentCourseData.SumOfPayments.ToString();
             studentCourseStatus.Text = studentCourseData.StudentCourseStatus;
+            countOfCompletedPractical.Text = studentCourseData.CountOfCompletedPractical.ToString() + "/" + studentCourseData.CountOfPractical.ToString();
         }
 
     }

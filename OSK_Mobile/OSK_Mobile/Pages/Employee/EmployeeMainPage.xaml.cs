@@ -70,7 +70,9 @@ namespace OSK_Mobile.Pages.Employee
             bool result = await DisplayAlert("WYLOGOWANIE", "Czy wylogować się z konta?", "TAK", "NIE");
             if (result) {
                 try {
-                    Application.Current.MainPage = new MainPage();
+                    //Application.Current.MainPage = new MainPage();
+                    await Navigation.PushAsync(new MainPage());
+                    this.Navigation.RemovePage(this.Navigation.NavigationStack[this.Navigation.NavigationStack.Count - 2]);
                 }
                 catch (Exception) {
 

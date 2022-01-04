@@ -5,7 +5,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label x:Name="courseName" Text="" FontSize="20" />
+            <Label x:Name="courseName" Text="Szczegóły kursu" FontSize="20" />
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -43,7 +43,7 @@
             <Label VerticalOptions="Center" x:Name="endCourseDate" Grid.Row="3" Grid.Column="1" Text="" />
 
             <BoxView Grid.Row="4" />
-            <Label VerticalOptions="Center" Grid.Row="4" Text="Dodatkowe godziny" />
+            <Label VerticalOptions="Center" Grid.Row="4" Text="Dodatkowe zajęcia" />
 
             <BoxView Grid.Row="4" Grid.Column="1" />
             <Label VerticalOptions="Center" x:Name="extraHours" Grid.Row="4" Grid.Column="1" Text="" />
@@ -60,7 +60,11 @@
             <BoxView Grid.Row="6" Grid.Column="1" />
             <Label VerticalOptions="Center" x:Name="studentCourseStatus" Grid.Row="6" Grid.Column="1" Text="" />
 
-            
+            <BoxView Grid.Row="7" />
+            <Label VerticalOptions="Center" Grid.Row="7" Text="Il. zrealizowanych zajęć praktycznych" />
+
+            <BoxView Grid.Row="7" Grid.Column="1" />
+            <Label VerticalOptions="Center" x:Name="countOfCompletedPractical" Grid.Row="7" Grid.Column="1" Text="" />
 
         </Grid>
 
