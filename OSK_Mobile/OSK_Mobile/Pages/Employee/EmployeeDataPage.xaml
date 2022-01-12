@@ -5,12 +5,12 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Text="Dane instruktora" FontSize="20" />
+            <Label Text="Dane instruktora" FontSize="20" TextColor="White" FontAttributes="Bold" />
         </StackLayout>
     </NavigationPage.TitleView>
 
     <StackLayout>
-        <Label Text="Dane osobowe" FontSize="20" Margin="5, 0, 0, 0" />
+        <Label Text="Dane osobowe" FontSize="20" Margin="5, 0, 0, 0"  TextColor="Black" FontAttributes="Bold" />
         <Grid Margin="5, 5, 5, 0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40" />
@@ -19,53 +19,53 @@
                 <RowDefinition Height="40" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="30*" />
             </Grid.ColumnDefinitions>
 
             <!-- 0 0 -->
             <BoxView />
-            <Label Text="Imię" FontSize="15" 
+            <Label Text="Imię" FontSize="15" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 0 1 -->
             <BoxView Grid.Column="1" />
-            <Label Grid.Column="1" Text="NIC" FontSize="15" x:Name="namesTxt"
+            <Label Grid.Column="1" Text="NIC" FontSize="15" x:Name="namesTxt" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 1 0 -->
             <BoxView Grid.Row="1"/>
-            <Label Grid.Row="1" Text="Nazwisko" FontSize="15" 
+            <Label Grid.Row="1" Text="Nazwisko" FontSize="15" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 1 1 -->
             <BoxView Grid.Row="1" Grid.Column="1" />
-            <Label Grid.Row="1" Grid.Column="1" Text="NIC" FontSize="15" x:Name="surnameTxt"
+            <Label Grid.Row="1" Grid.Column="1" Text="NIC" FontSize="15" x:Name="surnameTxt" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 2 0 -->
             <BoxView Grid.Row="2" />
-            <Label Grid.Row="2" Text="PESEL" FontSize="15" 
+            <Label Grid.Row="2" Text="PESEL" FontSize="15" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 2 1 -->
             <BoxView Grid.Row="2" Grid.Column="1" />
-            <Label Grid.Row="2" Grid.Column="1" Text="NIC" FontSize="15" x:Name="peselTxt" 
+            <Label Grid.Row="2" Grid.Column="1" Text="NIC" FontSize="15" x:Name="peselTxt" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 3 0 -->
             <BoxView Grid.Row="3" />
-            <Label Grid.Row="3" Text="Nazwa użytkownika" FontSize="15" 
+            <Label Grid.Row="3" Text="Nazwa użytkownika" FontSize="15" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 3 1 -->
             <BoxView Grid.Row="3" Grid.Column="1" />
-            <Label Grid.Row="3" Grid.Column="1" Text="NIC" FontSize="15" x:Name="userNameTxt" 
+            <Label Grid.Row="3" Grid.Column="1" Text="NIC" FontSize="15" x:Name="userNameTxt" TextColor="Black"
                    VerticalOptions="Center"/>
 
         </Grid>
 
-        <Label Text="Dane adresowe" FontSize="20" Margin="5, 0, 0, 0" />
+        <Label Text="Dane adresowe" FontSize="20" Margin="5, 0, 0, 0"  TextColor="Black" FontAttributes="Bold" />
         <Grid Margin="5, 5, 5, 0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40" />
@@ -83,77 +83,77 @@
 
             <!-- 0 0 -->
             <BoxView  />
-            <Label Text="Miejscowość" FontSize="15"
+            <Label Text="Miejscowość" FontSize="15" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 0 1 -->
             <BoxView Grid.Column="1" />
-            <Label Grid.Column="1" Text="NIC" FontSize="15" x:Name="townTxt"
+            <Label Grid.Column="1" Text="NIC" FontSize="15" x:Name="townTxt" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 1 0 -->
             <BoxView Grid.Row="1"/>
-            <Label Grid.Row="1" Text="Ulica" FontSize="15"
+            <Label Grid.Row="1" Text="Ulica" FontSize="15" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 1 1 -->
             <BoxView Grid.Row="1" Grid.Column="1" />
-            <Label Grid.Row="1" Grid.Column="1" Text="NIC" FontSize="15" x:Name="streetTxt"
+            <Label Grid.Row="1" Grid.Column="1" Text="NIC" FontSize="15" x:Name="streetTxt" TextColor="Black"
                    
                    VerticalOptions="Center"/>
 
             <!-- 2 0 -->
             <BoxView Grid.Row="2" />
-            <Label Grid.Row="2" Text="Numer domu/mieszkania" FontSize="15"
+            <Label Grid.Row="2" Text="Numer domu/mieszkania" FontSize="15" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 2 1 -->
             <BoxView Grid.Row="2" Grid.Column="1" />
-            <Label Grid.Row="2" Grid.Column="1" Text="NIC" FontSize="15" x:Name="nrHomeTxt"
+            <Label Grid.Row="2" Grid.Column="1" Text="NIC" FontSize="15" x:Name="nrHomeTxt" TextColor="Black"
                    
                    VerticalOptions="Center"/>
 
             <!-- 3 0 -->
             <BoxView Grid.Row="3" />
-            <Label Grid.Row="3" Text="Kod pocztowy" FontSize="15"
+            <Label Grid.Row="3" Text="Kod pocztowy" FontSize="15" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 3 1 -->
             <BoxView Grid.Row="3" Grid.Column="1" />
-            <Label Grid.Row="3" Grid.Column="1" Text="NIC" FontSize="15" x:Name="postCodeTxt"
+            <Label Grid.Row="3" Grid.Column="1" Text="NIC" FontSize="15" x:Name="postCodeTxt" TextColor="Black"
                    
                    VerticalOptions="Center"/>
 
             <!-- 4 0 -->
             <BoxView Grid.Row="4" />
-            <Label Grid.Row="4" Text="Poczta" FontSize="15"
+            <Label Grid.Row="4" Text="Poczta" FontSize="15" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 4 1 -->
             <BoxView Grid.Row="4" Grid.Column="1" />
-            <Label Grid.Row="4" Grid.Column="1" Text="NIC" FontSize="15" x:Name="postTxt"
+            <Label Grid.Row="4" Grid.Column="1" Text="NIC" FontSize="15" x:Name="postTxt" TextColor="Black"
                    
                    VerticalOptions="Center"/>
 
             <!-- 5 0 -->
             <BoxView Grid.Row="5" />
-            <Label Grid.Row="5" Text="Numer telefonu" FontSize="15"
+            <Label Grid.Row="5" Text="Numer telefonu" FontSize="15" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 5 1 -->
             <BoxView Grid.Row="5" Grid.Column="1" />
-            <Label Grid.Row="5" Grid.Column="1" Text="NIC" FontSize="15" x:Name="phoneTxt"
+            <Label Grid.Row="5" Grid.Column="1" Text="NIC" FontSize="15" x:Name="phoneTxt" TextColor="Black"
                    
                    VerticalOptions="Center"/>
 
             <!-- 6 0 -->
             <BoxView Grid.Row="6"  />
-            <Label Grid.Row="6" Text="E-mail" FontSize="15"
+            <Label Grid.Row="6" Text="E-mail" FontSize="15" TextColor="Black"
                    VerticalOptions="Center"/>
 
             <!-- 6 1 -->
             <BoxView Grid.Row="6" Grid.Column="1" />
-            <Label Grid.Row="6" Grid.Column="1" Text="NIC" FontSize="15" x:Name="emailTxt"
+            <Label Grid.Row="6" Grid.Column="1" Text="NIC" FontSize="15" x:Name="emailTxt" TextColor="Black"
                    VerticalOptions="Center"/>
 
         </Grid>

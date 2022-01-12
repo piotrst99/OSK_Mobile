@@ -5,7 +5,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label x:Name="userName" Text="" FontSize="20" />
+            <Label x:Name="userName" Text="" FontSize="20" TextColor="White" FontAttributes="Bold" />
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -26,75 +26,64 @@
 
             <BoxView />
             <ImageButton
-                BackgroundColor="#BF043055"
+                BackgroundColor="#FF9B47"
                 x:Name="userDataBtn"
                 Source="UserDataIcon.png"
                 Clicked="ShowUserData"/>
 
-            <!--<BoxView Grid.Column="1" />
+            <BoxView Grid.Column="1" />
             <ImageButton Grid.Column="1"
-                BackgroundColor="#BF043055"
-                x:Name="courseDataBtn"
+                BackgroundColor="#6FF654"
+                x:Name="employeeActivite"
                 Source="CourseIcon.png"
-                 />-->
+                Clicked="ShowEmployeeActivite"
+                 />
 
             <BoxView Grid.Row="1"  />
-            <Label Grid.Row="1" Text="Dane instruktora" FontSize="18"
+            <Label Grid.Row="1" Text="Dane instruktora" FontSize="18" TextColor="Black" FontAttributes="Bold"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
 
-            <!--<BoxView Grid.Row="1" Grid.Column="1" />
-            <Label Grid.Row="1" Grid.Column="1" Text="Twoje kursy" FontSize="18"
+            <BoxView Grid.Row="1" Grid.Column="1" />
+            <Label Grid.Row="1" Grid.Column="1" Text="Aktywność instr." FontSize="18" TextColor="Black" FontAttributes="Bold"
                    HorizontalOptions="Center"
-                   VerticalOptions="Center"/>-->
+                   VerticalOptions="Center"/>
 
             <BoxView Grid.Row="2"  />
             <ImageButton Grid.Row="2"
-                BackgroundColor="#BF043055"
+                BackgroundColor="#2E9FE7"
                 x:Name="driveDataBtn"
                 Source="DriveIcon.png"
                 Clicked="ShowDrives"
                 />
             
-            <BoxView Grid.Row="2" Grid.Column="1" 
-                     BackgroundColor="#BF043055" />
-            <Label Grid.Row="2" Grid.Column="1" Text="NIC" 
-                   TextColor="White" FontAttributes="Bold"
-                   x:Name="Btn"
-                   HorizontalOptions="Center" 
-                   VerticalOptions="Center"   />
+            <BoxView Grid.Row="2" Grid.Column="1" />
+            <ImageButton Grid.Row="2" Grid.Column="1"
+                BackgroundColor="#959396"
+                x:Name="settingsBtn"
+                Source="SettingsIcon.png"
+                Clicked="ShowSettings"
+                />
 
             <BoxView Grid.Row="3"  />
-            <Label Grid.Row="3" Text="Jazdy" FontSize="18"
+            <Label Grid.Row="3" Text="Jazdy" FontSize="18" TextColor="Black" FontAttributes="Bold"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
 
             <BoxView Grid.Row="3" Grid.Column="1" />
-            <Label Grid.Row="3" Grid.Column="1" Text="" FontSize="18"
+            <Label Grid.Row="3" Grid.Column="1" Text="Ustawienia" FontSize="18" TextColor="Black" FontAttributes="Bold"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
 
             <BoxView Grid.Row="4" />
             <ImageButton Grid.Row="4"
-                BackgroundColor="#BF043055"
-                x:Name="settingsBtn"
-                Source="SettingsIcon.png"
-                />
-
-            <BoxView Grid.Row="4" Grid.Column="1" />
-            <ImageButton Grid.Row="4" Grid.Column="1"
-                BackgroundColor="#BF043055"
+                BackgroundColor="#FF3D3D"
                 x:Name="logOutBtn"
                 Source="LogOutIcon.png"
                 Clicked="LogOut"/>
 
-            <BoxView Grid.Row="5"  />
-            <Label Grid.Row="5" Text="Ustawienia" FontSize="18"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
-
-            <BoxView Grid.Row="5" Grid.Column="1" />
-            <Label Grid.Row="5" Grid.Column="1" Text="Wyloguj" FontSize="18"
+            <BoxView Grid.Row="5" />
+            <Label Grid.Row="5" Text="Wyloguj" FontSize="18" TextColor="Black" FontAttributes="Bold"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
 

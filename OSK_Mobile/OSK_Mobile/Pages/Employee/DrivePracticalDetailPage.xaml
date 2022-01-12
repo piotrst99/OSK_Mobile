@@ -5,7 +5,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Text="Szczegóły zajęć praktycznych" FontSize="20" />
+            <Label Text="Szczegóły zajęć praktycznych" FontSize="20" TextColor="White" FontAttributes="Bold" />
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -20,67 +20,81 @@
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
             <BoxView />
-            <Label VerticalOptions="Center" Text="Data" />
+            <Label VerticalOptions="Center" Text="Data" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="data" Grid.Column="1" Text="{Binding Data}" />
+            <Label VerticalOptions="Center" x:Name="data" Grid.Column="1" Text="{Binding Data}" TextColor="Black" />
 
             <BoxView Grid.Row="1" />
-            <Label VerticalOptions="Center" Grid.Row="1" Text="Godzina zajęć" />
+            <Label VerticalOptions="Center" Grid.Row="1" Text="Godzina zajęć" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="1" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="startTime" Grid.Row="1" Grid.Column="1" Text="{Binding StartTime}" />
+            <Label VerticalOptions="Center" x:Name="startTime" Grid.Row="1" Grid.Column="1" Text="{Binding StartTime}" TextColor="Black" />
 
             <BoxView Grid.Row="2" />
-            <Label VerticalOptions="Center" Grid.Row="2" Text="Godzina zakończenia" />
+            <Label VerticalOptions="Center" Grid.Row="2" Text="Godzina zakończenia" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="2" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="endTime" Grid.Row="2" Grid.Column="1" Text="{Binding EndTime}" />
+            <Label VerticalOptions="Center" x:Name="endTime" Grid.Row="2" Grid.Column="1" Text="{Binding EndTime}" TextColor="Black" />
 
             <BoxView Grid.Row="3" />
-            <Label VerticalOptions="Center" Grid.Row="3" Text="Kursant" />
+            <Label VerticalOptions="Center" Grid.Row="3" Text="Kursant" TextColor="Black" FontAttributes="Bold"  />
 
             <BoxView Grid.Row="3" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="student" Grid.Row="3" Grid.Column="1" Text="" />
+            <Label VerticalOptions="Center" x:Name="student" Grid.Row="3" Grid.Column="1" Text="" TextColor="Black" />
             
             <BoxView Grid.Row="4" />
-            <Label VerticalOptions="Center" Grid.Row="4" Text="Instruktor" />
+            <Label VerticalOptions="Center" Grid.Row="4" Text="Instruktor" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="4" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="employee" Grid.Row="4" Grid.Column="1" Text="{Binding Employee}" />
+            <Label VerticalOptions="Center" x:Name="employee" Grid.Row="4" Grid.Column="1" Text="{Binding Employee}" TextColor="Black" />
 
             <BoxView Grid.Row="5" />
-            <Label VerticalOptions="Center" Grid.Row="5" Text="Kategoria" />
+            <Label VerticalOptions="Center" Grid.Row="5" Text="Kategoria" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="5" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="category" Grid.Row="5" Grid.Column="1" Text="{Binding Category}" />
+            <Label VerticalOptions="Center" x:Name="category" Grid.Row="5" Grid.Column="1" Text="{Binding Category}" TextColor="Black" />
 
             <BoxView Grid.Row="6" />
-            <Label VerticalOptions="Center" Grid.Row="6" Text="Pojazd" />
+            <Label VerticalOptions="Center" Grid.Row="6" Text="Pojazd" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="6" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="vehicle" Grid.Row="6" Grid.Column="1" Text="{Binding Vehicle}" />
+            <Label VerticalOptions="Center" x:Name="vehicle" Grid.Row="6" Grid.Column="1" Text="{Binding Vehicle}" TextColor="Black" />
 
             <BoxView Grid.Row="7" />
-            <Label VerticalOptions="Center" Grid.Row="7" Text="Telefon" />
+            <Label VerticalOptions="Center" Grid.Row="7" Text="Przebieg" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="7" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="studentPhone" Grid.Row="7" Grid.Column="1" Text="{Binding Status}" />
+            <Label VerticalOptions="Center" x:Name="course" Grid.Row="7" Grid.Column="1" Text="{Binding Vehicle}" TextColor="Black" />
+            
+            <BoxView Grid.Row="8" />
+            <Label VerticalOptions="Center" Grid.Row="8" Text="Telefon" TextColor="Black" FontAttributes="Bold" />
+
+            <BoxView Grid.Row="8" Grid.Column="1" />
+            <Label VerticalOptions="Center" x:Name="studentPhone" Grid.Row="8" Grid.Column="1" Text="{Binding Status}" TextColor="Black" />
             <ImageButton 
-                Grid.Row="7" Grid.Column="2"
+                Grid.Row="8" Grid.Column="2"
                 HeightRequest="40"
                 Source="PhoneIcon.png"
                 Margin="0, 0, 20, 0"
                 Clicked="CallToStudent"/>
 
-            <BoxView Grid.Row="8" />
-            <Label VerticalOptions="Center" Grid.Row="8" Text="Status zajęć" />
+            <BoxView Grid.Row="9" />
+            <Label VerticalOptions="Center" Grid.Row="9" Text="Status zajęć" TextColor="Black" FontAttributes="Bold" />
 
-            <BoxView Grid.Row="8" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="status" Grid.Row="8" Grid.Column="1" Text="" />
-
+            <BoxView Grid.Row="9" Grid.Column="1" />
+            <Label VerticalOptions="Center" x:Name="status" Grid.Row="9" Grid.Column="1" Text="" TextColor="Black" />
 
         </Grid>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End">
+            <Button BackgroundColor="Red" TextColor="White" FontSize="20" Text="Odwołaj" FontAttributes="Bold" x:Name="cancelBtn"
+                    Margin="0, 10, 20, 0" />
+
+            <Button BackgroundColor="Green" TextColor="White" FontSize="20" Text="Zatwierdź" FontAttributes="Bold" x:Name="acceptBtn"
+                   Margin="20, 10, 0, 0" />
+        </StackLayout>
+        
 
         <!--<Button BackgroundColor="Red" TextColor="White" FontSize="20" Text="Odwołaj" FontAttributes="Bold" x:Name="cancelBtn"
                 HorizontalOptions="Center" Margin="0, 10, 0, 0" Clicked="CancelPracticalRequest" />-->

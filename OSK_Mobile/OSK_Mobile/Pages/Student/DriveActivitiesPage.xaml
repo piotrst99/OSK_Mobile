@@ -5,7 +5,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Text="Jazdy" FontSize="20" />
+            <Label Text="Jazdy" FontSize="20" TextColor="White" FontAttributes="Bold" />
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -31,6 +31,25 @@
             
         </Grid>
 
+        <Grid Margin="5, 0, 5, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+            <BoxView />
+            <Label Text="Data" VerticalOptions="Center" TextColor="Black" />
+            <Label Grid.Column="1" Text="Godzina" VerticalOptions="Center" TextColor="Black" />
+            <Label Grid.Column="2" Text="Pracownik" VerticalOptions="Center" TextColor="Black" />
+            <Label Grid.Column="3" Text="Kat." VerticalOptions="Center" TextColor="Black" />
+            <Label Grid.Column="4" Text="Status" VerticalOptions="Center" TextColor="Black" />
+        </Grid>
+
         <ListView x:Name="listOfDrivesActivities" >
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -47,12 +66,13 @@
                                     <ColumnDefinition Width="1*" />
                                     <ColumnDefinition Width="4*" />
                                 </Grid.ColumnDefinitions>
+                                
                                 <BoxView />
-                                <Label Text="{Binding Data}" VerticalOptions="Center" />
-                                <Label Grid.Column="1" Text="{Binding StartTime}" VerticalOptions="Center" />
-                                <Label Grid.Column="2" Text="{Binding Employee}" VerticalOptions="Center" />
-                                <Label Grid.Column="3" Text="{Binding Category}" VerticalOptions="Center" />
-                                <Label Grid.Column="4" Text="{Binding Status}" VerticalOptions="Center" />
+                                <Label Text="{Binding Data}" VerticalOptions="Center" TextColor="Black" />
+                                <Label Grid.Column="1" Text="{Binding StartTime}" VerticalOptions="Center" TextColor="Black" />
+                                <Label Grid.Column="2" Text="{Binding Employee}" VerticalOptions="Center" TextColor="Black" />
+                                <Label Grid.Column="3" Text="{Binding Category}" VerticalOptions="Center" TextColor="Black" />
+                                <Label Grid.Column="4" x:Name="practicalStatus" Text="{Binding Status}" VerticalOptions="Center" TextColor="Black" />
                             </Grid>
                         </StackLayout>
                     </ViewCell>

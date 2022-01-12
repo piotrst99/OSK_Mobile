@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using OSK_Mobile.Models;
+using Plugin.LocalNotification;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,11 +33,14 @@ namespace OSK_Mobile.Pages.Student
             category.Text = practicalData.Category;
             vehicle.Text = practicalData.Vehicle;
             status.Text = practicalData.Status;
-            cancelBtn.IsEnabled = !practicalData.IsCancel;
+            if(!practicalData.IsCancel) { cancelBtn.IsEnabled = !practicalData.IsCancel; }
+            if(practicalData.Status == "Odwołane") { cancelBtn.IsEnabled = false; }
+            if(practicalData.Status == "Odwołane") { status.TextColor = Color.Red; }
+            if(practicalData.Status == "Zrealizowany") { status.TextColor = Color.Green; cancelBtn.IsEnabled = false; }
         }
 
         private async void CancelPracticalRequest(object sender, EventArgs e) {
-            
+
             bool result = await DisplayAlert("UWAGA", "Czy napewno chcesz odwołać jazdę?", "TAK", "NIE");
 
             if (result) {
@@ -52,6 +56,26 @@ namespace OSK_Mobile.Pages.Student
                 string JsonData = JsonConvert.SerializeObject(p);
                 await _clientOSK.PostAsync(UrlCancelPractical, new StringContent(JsonData, Encoding.UTF8, "application/json"));
             }
+
+            /*var notification = new NotificationRequest {
+                BadgeNumber = 1,
+                Description = "Zajęcia zostały odwołane",
+                Title = "OSK Mobile",
+                ReturningData = "Dummy Data",
+                NotificationId = 1337,
+            };
+
+            NotificationCenter.Current.Show(notification);
+
+            var notification2 = new NotificationRequest {
+                BadgeNumber = 2,
+                Description = "Zaległa wpłata",
+                Title = "OSK Mobile",
+                ReturningData = "Dummy Data",
+                NotificationId = 1338,
+            };
+
+            NotificationCenter.Current.Show(notification2);*/
 
         }
 

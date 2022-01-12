@@ -5,7 +5,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Text="Szczegóły wpłaty" FontSize="20" />
+            <Label Text="Szczegóły wpłaty" FontSize="20" TextColor="White" FontAttributes="Bold" />
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -19,34 +19,34 @@
                 <ColumnDefinition Width="2*" />
             </Grid.ColumnDefinitions>
             <BoxView />
-            <Label VerticalOptions="Center" Text="Data wpłaty" />
+            <Label VerticalOptions="Center" Text="Data wpłaty" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="paymentData" Grid.Column="1" Text="" />
+            <Label VerticalOptions="Center" x:Name="paymentData" Grid.Column="1" Text="" TextColor="Black" />
 
             <BoxView Grid.Row="1" />
-            <Label VerticalOptions="Center" Grid.Row="1" Text="Godzia wpłaty" />
+            <Label VerticalOptions="Center" Grid.Row="1" Text="Godzia wpłaty" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="1" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="timePayment" Grid.Row="1" Grid.Column="1" Text="" />
+            <Label VerticalOptions="Center" x:Name="timePayment" Grid.Row="1" Grid.Column="1" Text="" TextColor="Black" />
 
             <BoxView Grid.Row="2" />
-            <Label VerticalOptions="Center" Grid.Row="2" Text="Koszt" />
+            <Label VerticalOptions="Center" Grid.Row="2" Text="Koszt" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="2" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="cost" Grid.Row="2" Grid.Column="1" Text="" />
+            <Label VerticalOptions="Center" x:Name="cost" Grid.Row="2" Grid.Column="1" Text="" TextColor="Black" />
 
             <BoxView Grid.Row="3" />
-            <Label VerticalOptions="Center" Grid.Row="3" Text="Pracownik" />
+            <Label VerticalOptions="Center" Grid.Row="3" Text="Pracownik" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="3" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="employee" Grid.Row="3" Grid.Column="1" Text="" />
+            <Label VerticalOptions="Center" x:Name="employee" Grid.Row="3" Grid.Column="1" Text="" TextColor="Black" />
 
             <BoxView Grid.Row="4" />
-            <Label VerticalOptions="Center" Grid.Row="4" Text="Typ wpłaty" />
+            <Label VerticalOptions="Center" Grid.Row="4" Text="Typ wpłaty" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="4" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="typePayment" Grid.Row="4" Grid.Column="1" Text="" />
+            <Label VerticalOptions="Center" x:Name="typePayment" Grid.Row="4" Grid.Column="1" Text="" TextColor="Black" />
 
         </Grid>
     </StackLayout>

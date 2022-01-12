@@ -5,7 +5,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Text="Jazdy" FontSize="20" />
+            <Label Text="Jazdy" FontSize="20" TextColor="White" FontAttributes="Bold" />
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -53,11 +53,11 @@
                                     <ColumnDefinition Width="4*" />
                                 </Grid.ColumnDefinitions>
                                 <BoxView />
-                                <Label Text="{Binding Data}" VerticalOptions="Center" />
-                                <Label Grid.Column="1" Text="{Binding StartTime}" VerticalOptions="Center" />
-                                <Label Grid.Column="2" Text="{Binding Student}" VerticalOptions="Center" />
-                                <Label Grid.Column="3" Text="{Binding Category}" VerticalOptions="Center" />
-                                <Label Grid.Column="4" Text="{Binding Status}" VerticalOptions="Center" />
+                                <Label Text="{Binding Data}" VerticalOptions="Center" TextColor="Black" />
+                                <Label Grid.Column="1" Text="{Binding StartTime}" VerticalOptions="Center" TextColor="Black" />
+                                <Label Grid.Column="2" Text="{Binding Student}" VerticalOptions="Center" TextColor="Black" />
+                                <Label Grid.Column="3" Text="{Binding Category}" VerticalOptions="Center" TextColor="Black" />
+                                <Label Grid.Column="4" Text="{Binding Status}" VerticalOptions="Center" TextColor="Black" />
                             </Grid>
                         </StackLayout>
                     </ViewCell>

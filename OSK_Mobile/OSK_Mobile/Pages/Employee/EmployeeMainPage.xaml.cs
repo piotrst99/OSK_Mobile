@@ -58,10 +58,19 @@ namespace OSK_Mobile.Pages.Employee
             await Navigation.PushAsync(new EmployeeDataPage(_userID), true);
         }
 
+        private async void ShowEmployeeActivite(object sender, EventArgs e) {
+            await Navigation.PushAsync(new EmployeeActivitePage(), true);
+        }
+
         private async void ShowDrives(object sender, EventArgs e) {
             //Toast.MakeText(Android.App.Application.Context, "Jazdy", ToastLength.Short).Show();
             await Navigation.PushAsync(new DriveActivitesPage(_userID), true);
 
+        }
+
+        private async void ShowSettings(object sender, EventArgs e) {
+            //Toast.MakeText(Android.App.Application.Context, "Ustawienia", ToastLength.Short).Show();
+            await Navigation.PushAsync(new Settings.SettingsPage(_userID), true);
         }
 
         private async void LogOut(object sender, EventArgs e) {

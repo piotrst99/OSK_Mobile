@@ -35,7 +35,12 @@ namespace OSK_Mobile.Pages.Employee
             vehicle.Text = practicalData.Vehicle;
             status.Text = practicalData.Status;
             studentPhone.Text = practicalData.StudentPhone;
-            
+
+            if (!practicalData.IsCancel) { cancelBtn.IsEnabled = !practicalData.IsCancel; }
+            if (practicalData.Status == "Odwołane") { cancelBtn.IsEnabled = false; }
+            if (practicalData.Status == "Odwołane") { status.TextColor = Color.Red; }
+            if (practicalData.Status == "Zrealizowany") { status.TextColor = Color.Green; cancelBtn.IsEnabled = false; }
+
             //cancelBtn.IsEnabled = !practicalData.IsCancel;
         }
 
@@ -43,6 +48,25 @@ namespace OSK_Mobile.Pages.Employee
             await DisplayAlert("POŁĄCZENIE", "Rozpoczęcie rozmowy z numerem: " + practicalData.StudentPhone, "OK");
         }
 
+        private async void CancelPracticalRequest(object sender, EventArgs e) {
+            bool result = await DisplayAlert("UWAGA", "Czy napewno chcesz odwołać jazdę?", "TAK", "NIE");
+
+            if (result) {
+                string UrlCancelPractical = "http://10.0.2.2:32141/Activities/CancelPracticalRequest";
+                cancelBtn.IsEnabled = false;
+                practicalData.IsCancel = true;
+
+                PracticalData p = new PracticalData() {
+                    ID = practicalData.ID,
+                    IsCancel = true
+                };
+
+                string JsonData = JsonConvert.SerializeObject(p);
+                await _clientOSK.PostAsync(UrlCancelPractical, new StringContent(JsonData, Encoding.UTF8, "application/json"));
+            }
+            
+        }
+        
 
         /*private async void CancelPracticalRequest(object sender, EventArgs e) {
 

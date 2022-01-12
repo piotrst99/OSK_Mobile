@@ -5,7 +5,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Text="Wpłaty" FontSize="20" />
+            <Label Text="Wpłaty" FontSize="20" TextColor="White" FontAttributes="Bold" />
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -22,10 +22,10 @@
                 <ColumnDefinition Width="4*" />
             </Grid.ColumnDefinitions>
             <BoxView />
-            <Label Text="Data" VerticalOptions="Center" />
-            <Label Grid.Column="1" Text="Godzina" VerticalOptions="Center" />
-            <Label Grid.Column="2" Text="Koszt" VerticalOptions="Center" />
-            <Label Grid.Column="3" Text="Typ wpłaty" VerticalOptions="Center" />
+            <Label Text="Data" VerticalOptions="Center" TextColor="Black" FontAttributes="Bold" />
+            <Label Grid.Column="1" Text="Godzina" VerticalOptions="Center" TextColor="Black" FontAttributes="Bold" />
+            <Label Grid.Column="2" Text="Koszt" VerticalOptions="Center" TextColor="Black" FontAttributes="Bold" />
+            <Label Grid.Column="3" Text="Typ wpłaty" VerticalOptions="Center" TextColor="Black" FontAttributes="Bold" />
         </Grid>
 
         <ListView x:Name="listOfPayments" >
@@ -44,10 +44,10 @@
                                     <ColumnDefinition Width="4*" />
                                 </Grid.ColumnDefinitions>
                                 <BoxView />
-                                <Label Text="{Binding PaymentDate}" VerticalOptions="Center" />
-                                <Label Grid.Column="1" Text="{Binding PaymentTime}" VerticalOptions="Center" />
-                                <Label Grid.Column="2" Text="{Binding Cost}" VerticalOptions="Center" />
-                                <Label Grid.Column="3" Text="{Binding TypePayment}" VerticalOptions="Center" />
+                                <Label Text="{Binding PaymentDate}" VerticalOptions="Center" TextColor="Black" />
+                                <Label Grid.Column="1" Text="{Binding PaymentTime}" VerticalOptions="Center" TextColor="Black" />
+                                <Label Grid.Column="2" Text="{Binding Cost}" VerticalOptions="Center" TextColor="Black" />
+                                <Label Grid.Column="3" Text="{Binding TypePayment}" VerticalOptions="Center" TextColor="Black" />
                             </Grid>
                         </StackLayout>
                     </ViewCell>

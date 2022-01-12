@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OSK_Mobile.Pages.Employee.EmployeeActivitePage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Aktywność instruktora" FontSize="20" TextColor="White" FontAttributes="Bold" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <StackLayout>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+            <Label FontSize="18" VerticalOptions="Center" Text="Od" TextColor="Black"/>
+            <DatePicker
+                Format="dd-MM-yyyy"
+                x:Name="beginDate"/>
+            <Label FontSize="18" VerticalOptions="Center" Text="Do" TextColor="Black"/>
+            <DatePicker
+                Format="dd-MM-yyyy"
+                x:Name="endDate"/>
+        </StackLayout>
+
+        
+
+    </StackLayout>
+
+    
+</ContentPage>

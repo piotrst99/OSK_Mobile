@@ -5,18 +5,32 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Text="Twoje kursy" FontSize="20" />
+            <Label Text="Twoje kursy" FontSize="20" TextColor="White" FontAttributes="Bold" />
         </StackLayout>
     </NavigationPage.TitleView>
 
     <StackLayout>
-        <ListView x:Name="listOfStudentCourses">
+        <!--<ListView x:Name="listOfStudentCourses">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding CourseName}"></TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
+        </ListView>-->
+        <ListView x:Name="listOfStudentCourses">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout VerticalOptions="Center">
+                            <Label Text="{Binding CourseName}" FontSize="20" Margin="10,0, 0, 0" TextColor="Black" FontAttributes="Bold" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
+
+
     
+
 </ContentPage>

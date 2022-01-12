@@ -28,7 +28,7 @@ namespace OSK_Mobile.Pages.Student
             startCourseDate.Text = studentCourseData.StartDate;
             endCourseDate.Text = studentCourseData.EndDate;
             extraHours.Text = studentCourseData.ExtraHours.ToString();
-            sumOfPayments.Text = studentCourseData.SumOfPayments.ToString();
+            sumOfPayments.Text = studentCourseData.SumOfPayments.ToString()+" zł";
             studentCourseStatus.Text = studentCourseData.StudentCourseStatus;
             countOfCompletedPractical.Text = studentCourseData.CountOfCompletedPractical.ToString() + "/" + studentCourseData.CountOfPractical.ToString();
         }

@@ -47,7 +47,6 @@ namespace OSK_Mobile.Pages.Student
                 practicalDatas = responseData;
 
                 listOfDrivesActivities.ItemsSource = responseData;
-                
 
             }
             catch (Exception er) {

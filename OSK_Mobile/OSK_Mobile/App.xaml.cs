@@ -49,3 +49,7 @@ namespace OSK_Mobile
         }
     }
 }
+
+
+// https://www.youtube.com/watch?v=-Nj_TRPlx-8
+

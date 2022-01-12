@@ -88,8 +88,9 @@ namespace OSK_Mobile.Pages.Student
             await Navigation.PushAsync(new PaymentsPage(_userID), true);
         }
 
-        private void ShowSettings(object sender, EventArgs e) {
-            Toast.MakeText(Android.App.Application.Context, "Ustawienia", ToastLength.Short).Show();
+        private async void ShowSettings(object sender, EventArgs e) {
+            //Toast.MakeText(Android.App.Application.Context, "Ustawienia", ToastLength.Short).Show();
+            await Navigation.PushAsync(new Settings.SettingsPage(_userID), true);
         }
         
         private async void LogOut(object sender, EventArgs e) {
