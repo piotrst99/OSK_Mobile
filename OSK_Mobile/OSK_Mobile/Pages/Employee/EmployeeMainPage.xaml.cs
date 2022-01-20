@@ -59,7 +59,7 @@ namespace OSK_Mobile.Pages.Employee
         }
 
         private async void ShowEmployeeActivite(object sender, EventArgs e) {
-            await Navigation.PushAsync(new EmployeeActivitePage(), true);
+            await Navigation.PushAsync(new EmployeeActivitePage(_userID), true);
         }
 
         private async void ShowDrives(object sender, EventArgs e) {

@@ -5,7 +5,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Text="Szczegóły zajęć praktycznych" FontSize="20" TextColor="White" FontAttributes="Bold" />
+            <Label Text="Szczegóły jazdy" FontSize="20" TextColor="White" FontAttributes="Bold" />
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -35,7 +35,8 @@
             <Label VerticalOptions="Center" Grid.Row="2" Text="Godzina zakończenia" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="2" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="endTime" Grid.Row="2" Grid.Column="1" Text="{Binding EndTime}" TextColor="Black" />
+            <Label VerticalOptions="Center" x:Name="endTime" Grid.Row="2" Grid.Column="1" Text="{Binding EndTime}" TextColor="Black" IsVisible="false" />
+            <TimePicker x:Name="endTimeValue" VerticalOptions="Center" Grid.Row="2" Grid.Column="1" TextColor="Black" IsVisible="false" />
 
             <BoxView Grid.Row="3" />
             <Label VerticalOptions="Center" Grid.Row="3" Text="Kursant" TextColor="Black" FontAttributes="Bold"  />
@@ -59,14 +60,16 @@
             <Label VerticalOptions="Center" Grid.Row="6" Text="Pojazd" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="6" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="vehicle" Grid.Row="6" Grid.Column="1" Text="{Binding Vehicle}" TextColor="Black" />
+            <Label VerticalOptions="Center" x:Name="vehicle" Grid.Row="6" Grid.Column="1" Text="{Binding Vehicle}" TextColor="Black" IsVisible="true" />
+            <Entry x:Name="vehicleTxt" VerticalOptions="Center" Grid.Row="6" Grid.Column="1" TextColor="Black" IsVisible="false" />
 
             <BoxView Grid.Row="7" />
             <Label VerticalOptions="Center" Grid.Row="7" Text="Przebieg" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="7" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="course" Grid.Row="7" Grid.Column="1" Text="{Binding Vehicle}" TextColor="Black" />
-            
+            <Label VerticalOptions="Center" x:Name="course" Grid.Row="7" Grid.Column="1" Text="{Binding Vehicle}" TextColor="Black" IsVisible="true" />
+            <Entry x:Name="courseNumber" Keyboard="Numeric" VerticalOptions="Center" Grid.Row="7" Grid.Column="1" TextColor="Black" IsVisible="false" />
+
             <BoxView Grid.Row="8" />
             <Label VerticalOptions="Center" Grid.Row="8" Text="Telefon" TextColor="Black" FontAttributes="Bold" />
 
@@ -87,14 +90,22 @@
 
         </Grid>
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End">
+        <StackLayout x:Name="driveDetailsBtns" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" IsVisible="true">
             <Button BackgroundColor="Red" TextColor="White" FontSize="20" Text="Odwołaj" FontAttributes="Bold" x:Name="cancelBtn"
                     Margin="0, 10, 20, 0" />
 
             <Button BackgroundColor="Green" TextColor="White" FontSize="20" Text="Zatwierdź" FontAttributes="Bold" x:Name="acceptBtn"
-                   Margin="20, 10, 0, 0" />
+                   Clicked="AcceptDrive" Margin="20, 10, 0, 0" />
         </StackLayout>
-        
+
+        <StackLayout x:Name="editDriveBtns" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" IsVisible="false">
+            <Button BackgroundColor="Green" TextColor="White" FontSize="20" Text="Zapisz" FontAttributes="Bold" x:Name="saveBtn"
+                  Margin="0, 10, 20, 0" />
+
+            <Button BackgroundColor="Red" TextColor="White" FontSize="20" Text="Anuluj" FontAttributes="Bold" x:Name="cancelEditBtn"
+                    Clicked="CancelEdit" Margin="20, 10, 0, 0" />
+        </StackLayout>
+
 
         <!--<Button BackgroundColor="Red" TextColor="White" FontSize="20" Text="Odwołaj" FontAttributes="Bold" x:Name="cancelBtn"
                 HorizontalOptions="Center" Margin="0, 10, 0, 0" Clicked="CancelPracticalRequest" />-->

@@ -66,6 +66,44 @@ namespace OSK_Mobile.Pages.Employee
             }
             
         }
+
+        private /*async*/ void AcceptDrive(object sender, EventArgs e) {
+            //await Navigation.PushAsync(new AcceptDrivePage(practicalData), true);
+            
+            endTime.IsVisible = false;
+            endTimeValue.IsVisible = true;
+
+            vehicle.IsVisible = false;
+            vehicleTxt.IsVisible = true;
+
+            course.IsVisible = false;
+            courseNumber.IsVisible = true;
+
+            driveDetailsBtns.IsVisible = false;
+            editDriveBtns.IsVisible = true;
+
+        }
+
+        private async void CancelEdit(object sender, EventArgs e) {
+            bool result = await DisplayAlert("UWAGA", "Czy napewno chcesz wycofać zmiany?", "TAK", "NIE");
+
+            if (result) {
+                endTime.IsVisible = true;
+                endTimeValue.IsVisible = false;
+
+                vehicle.IsVisible = true;
+                vehicleTxt.IsVisible = false;
+                vehicleTxt.Text = "";
+
+                course.IsVisible = true;
+                courseNumber.IsVisible = false;
+                courseNumber.Text = 0.ToString();
+
+                driveDetailsBtns.IsVisible = true;
+                editDriveBtns.IsVisible = false;
+            }
+
+        }
         
 
         /*private async void CancelPracticalRequest(object sender, EventArgs e) {

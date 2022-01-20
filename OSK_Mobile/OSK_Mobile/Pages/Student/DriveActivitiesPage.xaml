@@ -44,7 +44,7 @@
             </Grid.ColumnDefinitions>
             <BoxView />
             <Label Text="Data" VerticalOptions="Center" TextColor="Black" />
-            <Label Grid.Column="1" Text="Godzina" VerticalOptions="Center" TextColor="Black" />
+            <Label Grid.Column="1" Text="Godz." VerticalOptions="Center" TextColor="Black" />
             <Label Grid.Column="2" Text="Pracownik" VerticalOptions="Center" TextColor="Black" />
             <Label Grid.Column="3" Text="Kat." VerticalOptions="Center" TextColor="Black" />
             <Label Grid.Column="4" Text="Status" VerticalOptions="Center" TextColor="Black" />

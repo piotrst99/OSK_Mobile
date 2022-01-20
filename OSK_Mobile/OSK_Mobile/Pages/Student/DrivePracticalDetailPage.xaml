@@ -5,7 +5,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Text="Szczegóły zajęć praktycznych" FontSize="20" TextColor="White" FontAttributes="Bold" />
+            <Label Text="Szczegóły jazdy" FontSize="20" TextColor="White" FontAttributes="Bold" />
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -55,10 +55,16 @@
             <Label VerticalOptions="Center" x:Name="vehicle" Grid.Row="5" Grid.Column="1" Text="{Binding Vehicle}"  TextColor="Black" />
 
             <BoxView Grid.Row="6" />
-            <Label VerticalOptions="Center" Grid.Row="6" Text="Status zajęć" TextColor="Black" FontAttributes="Bold" />
+            <Label VerticalOptions="Center" Grid.Row="6" Text="Numer rejestracyjny" TextColor="Black" FontAttributes="Bold" />
 
             <BoxView Grid.Row="6" Grid.Column="1" />
-            <Label VerticalOptions="Center" x:Name="status" Grid.Row="6" Grid.Column="1" Text="{Binding Status}"  TextColor="Black" />
+            <Label VerticalOptions="Center" x:Name="nrRegister" Grid.Row="6" Grid.Column="1" Text="{Binding Vehicle}"  TextColor="Black" />
+            
+            <BoxView Grid.Row="7" />
+            <Label VerticalOptions="Center" Grid.Row="7" Text="Status zajęć" TextColor="Black" FontAttributes="Bold" />
+
+            <BoxView Grid.Row="7" Grid.Column="1" />
+            <Label VerticalOptions="Center" x:Name="status" Grid.Row="7" Grid.Column="1" Text="{Binding Status}"  TextColor="Black" />
 
         </Grid>
 

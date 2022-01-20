@@ -20,8 +20,101 @@
             <DatePicker
                 Format="dd-MM-yyyy"
                 x:Name="endDate"/>
+            <Button HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Column="1" Text="Wyświetl" Clicked="GetDataClick" 
+                TextColor="White" FontAttributes="Bold" BackgroundColor="#088da5" />
         </StackLayout>
 
+        <StackLayout>
+            <Grid x:Name="drivaPracticalDetail" Margin="5, 5, 5, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <BoxView />
+                <Label VerticalOptions="Center" Text="Il. jazd łącznie" TextColor="Black" FontAttributes="Bold" />
+
+                <BoxView Grid.Column="1" />
+                <Label VerticalOptions="Center" x:Name="countTotal" Grid.Column="1" Text="" TextColor="Black" />
+
+                <BoxView Grid.Row="1" />
+                <Label VerticalOptions="Center" Grid.Row="1" Text="Zaplanowane jazdy" TextColor="Black" FontAttributes="Bold" />
+
+                <BoxView Grid.Row="1" Grid.Column="1" />
+                <Label VerticalOptions="Center" x:Name="countPlanned" Grid.Row="1" Grid.Column="1" Text="" TextColor="Black" />
+
+                <BoxView Grid.Row="2" />
+                <Label VerticalOptions="Center" Grid.Row="2" Text="Zrealizowane jazdy" TextColor="Black" FontAttributes="Bold" />
+
+                <BoxView Grid.Row="2" Grid.Column="1" />
+                <Label VerticalOptions="Center" x:Name="countDone" Grid.Row="2" Grid.Column="1" Text="{Binding EndTime}" TextColor="Black" />
+
+                <BoxView Grid.Row="3" />
+                <Label VerticalOptions="Center" Grid.Row="3" Text="Odwołane jazdy" TextColor="Black" FontAttributes="Bold"  />
+
+                <BoxView Grid.Row="3" Grid.Column="1" />
+                <Label VerticalOptions="Center" x:Name="countCancel" Grid.Row="3" Grid.Column="1" Text="" TextColor="Black" />
+
+            </Grid>
+
+        </StackLayout>
+
+        <StackLayout>
+
+            <!--<Grid Margin="5, 0, 5, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="4*" />
+                </Grid.ColumnDefinitions>
+                <BoxView />
+                <Label Text="Data" VerticalOptions="Center" TextColor="Black" />
+                <Label Grid.Column="1" Text="Godz." VerticalOptions="Center" TextColor="Black" />
+                <Label Grid.Column="2" Text="Kursant" VerticalOptions="Center" TextColor="Black" />
+                <Label Grid.Column="3" Text="Kat." VerticalOptions="Center" TextColor="Black" />
+                <Label Grid.Column="4" Text="Status" VerticalOptions="Center" TextColor="Black" />
+            </Grid>
+
+            <ListView x:Name="listOfDrivesActivities" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid Margin="5, 0, 5, 0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="4*" />
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="4*" />
+                                    </Grid.ColumnDefinitions>
+                                    <BoxView />
+                                    <Label Text="{Binding Data}" VerticalOptions="Center" TextColor="Black" />
+                                    <Label Grid.Column="1" Text="{Binding StartTime}" VerticalOptions="Center" TextColor="Black" />
+                                    <Label Grid.Column="2" Text="{Binding Student}" VerticalOptions="Center" TextColor="Black" />
+                                    <Label Grid.Column="3" Text="{Binding Category}" VerticalOptions="Center" TextColor="Black" />
+                                    <Label Grid.Column="4" Text="{Binding Status}" VerticalOptions="Center" TextColor="Black" />
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            -->
+            
+        </StackLayout>
         
 
     </StackLayout>

@@ -41,7 +41,7 @@ namespace OSK_Mobile.Pages.Student
 
         private async void CancelPracticalRequest(object sender, EventArgs e) {
 
-            bool result = await DisplayAlert("UWAGA", "Czy napewno chcesz odwołać jazdę?", "TAK", "NIE");
+            bool result = await DisplayAlert("UWAGA", "Czy napewno chcesz wysłać prośbę o odwołanie jazdy?", "TAK", "NIE");
 
             if (result) {
                 string UrlCancelPractical = "http://10.0.2.2:32141/Activities/CancelPracticalRequest";

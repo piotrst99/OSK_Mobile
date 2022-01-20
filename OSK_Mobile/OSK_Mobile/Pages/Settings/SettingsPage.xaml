@@ -25,8 +25,18 @@
 
             <!-- 1 -->
             <BoxView Grid.Row="1" />
-            <Label Grid.Row="1" Text="Powiadomienia" FontSize="15" x:Name="notificationBtn" TextColor="Black"
+            <Label Grid.Row="1" Text="Motyw" FontSize="15" x:Name="theme" TextColor="Black"
                    VerticalOptions="Center"/>
+
+            <!-- 2 -->
+            <BoxView Grid.Row="2" />
+            <Label Grid.Row="2" Text="Telefony" FontSize="15" TextColor="Black" x:Name="phones"
+                   VerticalOptions="Center"/>
+
+            <!-- 3 -->
+            <!--<BoxView Grid.Row="3" />
+            <Label Grid.Row="3" Text="Pomoc" FontSize="15" x:Name="help" TextColor="Black"
+                   VerticalOptions="Center"/>-->
 
 
         </Grid>
