@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using OSK_Mobile.Pages;
+using System.Security.Cryptography;
 
 namespace OSK_Mobile
 {
@@ -43,9 +44,17 @@ namespace OSK_Mobile
 
             try {
 
+                var sha256 = new SHA256Managed();
+                byte[] password = Encoding.ASCII.GetBytes(passwordStr);
+                byte[] hashValue = sha256.ComputeHash(password);
+
+                string pwdStr = "";
+                foreach (byte b in hashValue)
+                    pwdStr += b.ToString("x2");
+
                 LoginData loginData = new LoginData() {
                     login = loginStr,
-                    password = passwordStr,
+                    password = pwdStr,
                     val = value
                 };
 
