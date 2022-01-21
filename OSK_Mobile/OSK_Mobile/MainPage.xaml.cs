@@ -15,6 +15,7 @@ using Xamarin.Forms;
 using OSK_Mobile.Pages;
 using System.Security.Cryptography;
 using System.IO;
+using Xamarin.Essentials;
 
 namespace OSK_Mobile
 {
@@ -73,39 +74,46 @@ namespace OSK_Mobile
                     val = value
                 };
 
-                string JsonData = JsonConvert.SerializeObject(loginData);
-                var resourse = await _clientOSK.PostAsync(Url_CheckLoginData, new StringContent(JsonData, Encoding.UTF8, "application/json"));
-                var resultData = await resourse.Content.ReadAsStringAsync();
-                var responseData = JsonConvert.DeserializeObject<LoginResult>(resultData);
+                var current = Connectivity.NetworkAccess;
 
-                if(!responseData.result){
-                    Toast.MakeText(Android.App.Application.Context, "Nieprawidłowe dane logowania", ToastLength.Short).Show();
-                }
-                else {
-                    if(value == 1) {
-                        Application.Current.Properties["isLogin"] = 1;
+                if (current == NetworkAccess.Internet) {
 
-                        var studentMainPage = new Pages.Student.StudentMainPage(loginStr);
-                        NavigationPage.SetHasNavigationBar(studentMainPage, false);
-                        NavigationPage mypage = new NavigationPage(studentMainPage);
+                    string JsonData = JsonConvert.SerializeObject(loginData);
+                    var resourse = await _clientOSK.PostAsync(Url_CheckLoginData, new StringContent(JsonData, Encoding.UTF8, "application/json"));
+                    var resultData = await resourse.Content.ReadAsStringAsync();
+                    var responseData = JsonConvert.DeserializeObject<LoginResult>(resultData);
 
-                        File.WriteAllText(_fileName, loginStr+"\n"+"student");
-                        await Navigation.PushAsync(new Pages.Student.StudentMainPage(loginStr), true);
-                        
-                        LoginTxt.Text = "";
-                        PasswordTxt.Text = "";
+                    if (!responseData.result) {
+                        Toast.MakeText(Android.App.Application.Context, "Nieprawidłowe dane logowania", ToastLength.Short).Show();
                     }
                     else {
-                        LoginTxt.Text = "";
-                        PasswordTxt.Text = "";
-                        File.WriteAllText(_fileName, loginStr+"\n"+"employee");
-                        await Navigation.PushAsync(new Pages.Employee.EmployeeMainPage(loginStr), true);
+                        if (value == 1) {
+                            Application.Current.Properties["isLogin"] = 1;
+
+                            var studentMainPage = new Pages.Student.StudentMainPage(loginStr);
+                            NavigationPage.SetHasNavigationBar(studentMainPage, false);
+                            NavigationPage mypage = new NavigationPage(studentMainPage);
+
+                            File.WriteAllText(_fileName, loginStr + "\n" + "student");
+                            await Navigation.PushAsync(new Pages.Student.StudentMainPage(loginStr), true);
+
+                            LoginTxt.Text = "";
+                            PasswordTxt.Text = "";
+                        }
+                        else {
+                            LoginTxt.Text = "";
+                            PasswordTxt.Text = "";
+                            File.WriteAllText(_fileName, loginStr + "\n" + "employee");
+                            await Navigation.PushAsync(new Pages.Employee.EmployeeMainPage(loginStr), true);
+                        }
                     }
 
-                    
-
                 }
-
+                else {
+                    Device.BeginInvokeOnMainThread(() => {
+                        DisplayAlert("BŁĄD", "Brak połączenia z internetem", "OK");
+                    });
+                }
             }
             catch (Exception er) {
                 //result.Text = er.ToString();
@@ -115,15 +123,24 @@ namespace OSK_Mobile
         }
 
         public async void AutoLogin(string userName, string role) {
-            if(role == "student") {
+            var current = Connectivity.NetworkAccess;
+            if (current == NetworkAccess.Internet) { 
+                if (role == "student") {
                 var studentMainPage = new Pages.Student.StudentMainPage(userName);
                 NavigationPage.SetHasNavigationBar(studentMainPage, false);
                 NavigationPage mypage = new NavigationPage(studentMainPage);
                 await Navigation.PushAsync(new Pages.Student.StudentMainPage(userName), true);
+                }
+                else {
+                    await Navigation.PushAsync(new Pages.Employee.EmployeeMainPage(userName), true);
+                }
             }
             else {
-                await Navigation.PushAsync(new Pages.Employee.EmployeeMainPage(userName), true);
+                Device.BeginInvokeOnMainThread(() => {
+                    DisplayAlert("BŁĄD", "Brak połączenia z internetem", "OK");
+                });
             }
+
         }
 
     }
