@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using OSK_Mobile.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -99,6 +100,9 @@ namespace OSK_Mobile.Pages.Student
             bool result = await DisplayAlert("WYLOGOWANIE", "Czy wylogować się z konta?", "TAK", "NIE");
             if (result) {
                 try {
+                    string _fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "userData.txt");
+                    File.WriteAllText(_fileName, "");
+
                     //Application.Current.MainPage = new MainPage();
                     //App.Current.MainPage = new MainPage();
                     await Navigation.PushAsync(new MainPage());
