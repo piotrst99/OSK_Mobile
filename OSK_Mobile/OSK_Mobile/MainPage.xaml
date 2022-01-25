@@ -3,9 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinForms3RestApi"
              xmlns:android="http://schemas.android.com/apk/res/android"
-             x:Class="OSK_Mobile.MainPage">
+             x:Class="OSK_Mobile.MainPage" BackgroundImageSource="test2.png">
 
-    
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS, Android" Value="0,40,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
     <!--<StackLayout>
         <Label x:Name="countOfStudents" FontSize="20"></Label>
         <ListView x:Name="MyListView">
@@ -20,6 +25,7 @@
             <Button Text="Update" HorizontalOptions="CenterAndExpand" BackgroundColor="MediumPurple" Clicked="OnUpdate" />
             <Button Text="Delete" BackgroundColor="Crimson" Clicked="OnDelete" />
         </StackLayout>
+    BackgroundImageSource="oskImage.jpg"
     </StackLayout>-->
 
     
@@ -48,7 +54,7 @@
         <StackLayout Margin="50, 0, 50, 0">
             <Button Text="Zaloguj" TextColor="White" 
                         FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
-                        BackgroundColor="#088da5" Clicked="LoginToAccount"  />
+                        BackgroundColor="#289E06" Clicked="LoginToAccount"  />
             
         </StackLayout>
         
